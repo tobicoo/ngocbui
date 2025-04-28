@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
+/* Base styles */
+body {
+    background-color: #fff;
+    font-family: GoogleSans, sans-serif;
+    font-size: 16px;
+    overflow: auto;
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: #bc2330;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: GoogleSans-Bold, sans-serif;
+}
+h5 {
+    text-align: center;
+    font-family: GoogleSans-Bold, sans-serif;
+}
+
+.navbar-finalstyle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+}
+
+.navbar-finalstyle #main-menu ul {
+    display: flex;
+    margin: 0;
+}
+.navbar-finalstyle #main-menu ul li a {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    padding-right: 32px;
+    text-decoration: none;
+    font-weight: bold;
+}
+@media (min-width: 980px) and (max-width: 1300px) {
+    .navbar-finalstyle #main-menu ul li a {
+        font-size: 14px;
+        padding-right: 20px;
+        white-space: nowrap;
+    }
+}
+
+.navbar-finalstyle #main-menu ul li a:hover {
+    color: var(--primary-primary-500, #e91a22);
+}
+.navbar-finalstyle #main-menu ul li .sub-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+}
+.navbar-finalstyle #main-menu ul li .sub-menu li a {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 11px 26px 9px 6px;
+    width: 200px;
+}
+.navbar-finalstyle #main-menu ul li .sub-menu li a:hover {
+    background-color: var(--primary-primary-500, #e91a22);
+    border-radius: 8px;
+}
+.navbar-finalstyle #main-menu ul > li:hover .sub-menu {
+    display: block;
+    background: rgba(26, 3, 4, 0.6);
+    border-top: 2px solid #e4a812;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(56, 65, 39, 0.06);
+    padding: 8px;
+}
+
+/* Navbar buttons */
+.navbar-finalstyle .btn-order {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    background: #e91a22;
+    color: #fff;
+    border-radius: 8px;
+    padding: 15px 40px;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.navbar-finalstyle .navbar-brand img {
+    max-height: 90px;
+    vertical-align: middle;
+    height: auto;
+    width: auto;
+}
+
+/*footer*/
+.main-footer {
+    background: linear-gradient(180deg, #853c40, #620b0e),
+        url("storage/upload_image/images/logo_footer.png");
+    background-size: cover;
+    background-position: center;
+}
+.main-footer .top-footer .info-ft-phone {
+    background: rgba(26, 3, 4, 0.28);
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+.main-footer .top-footer .info-ft-phone p {
+    color: #d6cdcd;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.main-footer .top-footer .info-ft-phone span {
+    color: #e9b941;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+}
+
+.main-footer .top-footer .info-ft-phone .open-store {
+    font-family: Roboto, sans-serif;
+    color: #ffffff;
+}
+
+.main-footer .top-footer .btn-order {
+    background: #e4a812;
+    color: #620b0e;
+    font-family: Roboto, sans-serif;
+    border-radius: 8px;
+    padding: 11px 10px;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.btn-order:hover {
+    transform: scale(1.05);
+}
+
+.main-footer .top-footer .menu-bottom-ft .text-uppercase {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+}
+
+.main-footer .top-footer .menu-bottom-ft .list-item-menu-bt li a {
+    color: var(--primary-primary-200, #f59699);
+    font-size: 14px;
+    margin-bottom: 16px;
+    display: block;
+    transition: transform 0.15s;
+}
+
+.main-footer .top-footer .menu-bottom-ft .list-item-menu-bt li a:hover {
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.main-footer .top-footer .link-to-restaurant {
+    margin-top: 20px;
+}
+.main-footer .top-footer .link-to-restaurant .btn-store {
+    background: rgba(26, 3, 4, 0.28);
+    color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    display: block;
+    width: 100%;
+}

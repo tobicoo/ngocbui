@@ -1,0 +1,262 @@
+/*phần tổng */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.booking-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 20px;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(156, 156, 155, 0.568);
+  z-index: -1;
+}
+/* chính */
+.form-box {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #e6e6e6;
+  border-radius: 12px;
+}
+/* đặt bàn ngay- nhậu liền tay */
+.form-box h1 {
+  text-align: center;
+  font-size: 42px;
+  color: #ffcc00;
+  font-weight: 800;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  margin-bottom: 20px;
+  animation: zoomInFade 1s ease forwards;
+}
+@keyframes zoomInFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.form-box h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #ffc107;
+  animation: sloganShake 1s ease;
+}
+/* động khuyến mại */
+@keyframes sloganShake {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(2deg); }
+  40% { transform: rotate(-2deg); }
+  60% { transform: rotate(2deg); }
+  80% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+/* khung tt khách ahngf */
+.form-group label {
+  display: block;
+  font: 1em sans-serif;
+  color: #080808;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #fdfdfd;
+  color: #000000;
+}
+
+/* khung của khuyến mại */
+.promotion-box {
+  margin: 20px 0;
+  background: #222;
+  padding: 15px;
+  border-left: 5px solid #ffc107;
+  color: #ffc107;
+  font-weight: bold;
+  animation: blink 2s infinite;
+}
+/* đặt bàn ngay */
+button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background: #ffc107;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #ffb300;
+}
+/* khung guest and time */
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.counter button {
+  background: none;
+  border: none;
+  color: #ffc107;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.counter-center {
+  text-align: center;
+}
+
+
+.counter-value {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Nhãn nhỏ bên dưới */
+.counter-label {
+  font-size: 14px;
+  color: #a09494;
+}
+
+
+/* khối lịch*/
+.calendar-wrapper{
+  margin-top: 40px;
+  max-width: 700px;
+  background: #d8d5d5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(15, 14, 14, 0.1);
+  margin-bottom: 30px;
+}
+
+/*hiển thị tháng*/
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* prev and next -month*/
+.calendar-header button {
+  
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.day-cell {
+  padding: 20px 0;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px ;
+}
+
+.valid-day {
+  background-color: #fff;
+}
+
+.past-day, .future-limit-day {
+  color: #999;
+  pointer-events: none;
+  border: none;
+  background: none;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.cta-hot {
+  background: linear-gradient(to right, #ff9800, #ffc107);
+  color: #111;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 18px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.cta-hot:hover {
+  transform: scale(1.05);
+  background: #ffb300;
+}
+.vd-beer {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto 20px auto;
+  display: block;
+  border-radius: 10px;  box-shadow: 0 0 15px rgba(15, 14, 14, 0.1);
+}
+.logo {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;}

@@ -1,0 +1,91 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt Bàn - Lĩnh Nam Tửu Quán</title>
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
+  <style>
+
+</style>
+</head>
+<body>
+  <section class="booking-section">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="video/quannhau.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <div class="form-box">
+      <img src="images/TACHNEN.png" alt="logo" class="logo">
+      <div class="form-header">
+       
+      <h1>Đặt Bàn Lĩnh Nam</h1>
+      <h2>🍺 Cùng chiến nào! Đặt bàn sớm – Bia sẵn, món ngon chờ! 🔥</h2>
+  <video autoplay muted loop playsinline class="vd-beer">
+    <source src="video/bia.mp4" type="video/mp4">
+  </video>
+  <form id="booking-form">
+
+<div class="calendar-wrapper">
+    <div class="calendar-header">
+          <button id="prev">&#10094;</button>
+          <div id="monthYear">Tháng</div>
+          <button id="next">&#10095;</button>
+    </div>
+    <div class="calendar-grid" id="calendarGrid"></div>
+</div>
+<!-- Phần chọn số khách -->
+<div class="form-group full">
+  <div class="counter">
+    <button type="button" onclick="updateGuests(-1)">&#10094;</button>
+    <div class="counter-center">
+      <div id="guestCount" class="counter-value">2</div>
+      <div class="counter-label">Guests</div>
+    </div>
+    <button type="button" onclick="updateGuests(1)">&#10095;</button>
+  </div>
+</div>
+
+<!-- Phần chọn giờ -->
+<div class="form-group full">
+  <div class="counter">
+    <button type="button" onclick="changeTime(-30)">&#10094;</button>
+    <div class="counter-center">
+      <div id="timeSlot" class="counter-value">18:30</div>
+      <div class="counter-label">Time</div>
+    </div>
+    <button type="button" onclick="changeTime(30)">&#10095;</button>
+  </div>
+</div>
+
+        <div class="form-group">
+          <label for="promotion">Chọn khuyến mãi dành riêng cho bạn:</label>
+          <select id="promotion" name="promotion" >
+                  <option value="free_dish">🎁 Tặng 1 món đặc biệt</option>
+                  <option value="discount10">🔖 Giảm 10% hóa đơn</option>
+                  <option value="free_beer">🍺 Tặng 2 ly bia hơi </option>
+          </select>
+        </div>
+
+
+                <div class="form-group">
+                  <label for="notes">Ghi chú (món muốn đặt, yêu cầu đặc biệt...)</label>
+                  <textarea id="notes" rows="4"></textarea>
+                </div>
+        
+                <div class="promotion-box">
+                  🎁 <strong>Khuyến mãi:</strong> Đặt bàn trước 19h tặng 1 món đặc biệt!
+                </div>
+        
+                <button type="submit" class="cta-hot">🔥 ĐẶT BÀN NGAY - Giữ chỗ ăn nhậu cực chill!</button>
+    </form>        
+</div>
+
+
+  </section>
+  <script src="js/datban.js"></script>
+</body>
+</html>

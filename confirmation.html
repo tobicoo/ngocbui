@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đặt bàn - Lĩnh Nam Tửu Quán</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="css/dangnhap.css">
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
+</head>
+
+<body>
+
+<div class="top-banner">
+  <div id="topSummary"></div>
+  <div id="countdownText"></div>
+</div>
+
+<div class="container">
+  <h2>Your Information</h2>
+  <div class="form-inputs">
+    <input type="text" id="firstName" placeholder="First Name *">
+    <input type="text" id="lastName" placeholder="Last Name *">
+    <input type="email" id="email" placeholder="Email Address *">
+    <input type="text" id="phone" placeholder="Phone Number *">
+  </div>
+
+  <h2>Thông tin đặt bàn</h2>
+  <div class="summary-box">
+    <div class="summary-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span><b>Lĩnh Nam Tửu Quán - Cơ sở 1: 235 Hoàng Quốc Việt, Hà Nội</b></span>
+    </div>
+
+    <div class="summary-item">
+      <i class="fas fa-clock"></i><!-- fontawesome hình đồng hồ-->
+      <span id="summaryDateTime"></span> <!-- ngày giờ tháng-->
+    </div>
+
+    <div class="summary-item">
+      <i class="fas fa-user-friends"></i><!-- fontawesome số khách-->
+      <span id="summaryGuests"></span><!-- khách-->
+    </div>
+
+    <div class="summary-item">
+      <i class="fas fa-pen"></i>
+      <span>Ghi chú/ Mã ưu đãi</span>
+    </div>
+
+    <div class="summary-item">
+      <i class="fas fa-check-circle"></i>
+      <span>Xác nhận đặt bàn</span>
+      <button class="confirm-btn" id="confirmBooking">Xác nhận</button>
+    </div>
+  </div>
+</div>
+
+<div id="thankYouPage" style="display:none;">
+  <div class="thankyou-container">
+    <div class="thank-you-banner">
+      <p>Xin cảm ơn quý khách.</p>
+      <h1>Chúng tôi rất hân hạnh được chào đón quý khách.</h1>
+    </div>
+
+    <div class="confirmation-details">
+      <p id="confirmEmail"></p>
+      <div class="booking-info">
+        <p><b>Lĩnh Nam Tửu Quán - Cơ sở 1: 235 Hoàng Quốc Việt, Hà Nội</b></p>
+        <p id="confirmDateTime"></p>
+        <p id="confirmGuests"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const date = params.get('date');
+const guests = params.get('guests');
+const timeBooking = params.get('time');
+document.getElementById('topSummary').textContent = `${date} · ${guests} khách · ${timeBooking}`;
+document.getElementById('summaryDateTime').textContent = `${date} · ${timeBooking}`;
+document.getElementById('summaryGuests').textContent = `${guests} khách`;
+
+let time = 300;
+function startCountdown() {
+  const m = Math.floor(time / 60);
+  const s = time % 60;
+  const countdownText = time >= 0 
+    ? `Chúng tôi đang giữ bàn này trong ${m}:${s.toString().padStart(2, '0')} phút`
+    : "Bàn của quý khách hiện không còn được giữ, quý khách vẫn có thể thử đặt lại.";
+  
+  document.getElementById('countdownText').textContent = countdownText;
+  
+  if (time >= 0) {
+    time--;
+    setTimeout(startCountdown, 1000);
+  }
+}
+startCountdown();
+
+document.getElementById('confirmBooking').onclick = function() {
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+
+  if (!firstName || !lastName || !email || !phone) {
+    alert('Vui lòng nhập đầy đủ thông tin trước khi xác nhận!');
+    return;
+  }
+
+  document.querySelector('.container').style.display = 'none';
+  document.querySelector('.top-banner').style.display = 'none';
+  document.getElementById('thankYouPage').style.display = 'block';
+
+  document.getElementById('confirmEmail').textContent = `Thông tin xác nhận đã được gửi đến ${email}`;
+  document.getElementById('confirmDateTime').textContent = `${date} · ${timeBooking}`;
+  document.getElementById('confirmGuests').textContent = `${guests} khách`;
+};
+</script>
+
+</body>
+</html>

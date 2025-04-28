@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/web.css"> 
+    <link rel="stylesheet" href="css/web/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+<body>
+    <div id="web">
+        <!-- Main Navigation -->
+        <header class="navbar-finalstyle">
+            <div class="container-top">
+                <div class="row align-items-center">
+                    <div class="col-md-2 col-2 col-xl-3">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="storage/upload_image/images/logo_footer.png" alt="Lĩnh Nam Tửu Quán" class="img-fluid logo-fs">
+                        </a>
+                    </div>
+                    <div class="col-md-9 col-5">
+                        <div class="d-flex align-items-center justify-content-md-between justify-content-end">
+                            <nav class="menu-top d-none d-lg-block" id="main-menu">
+                                <ul class="list-unstyled text-uppercase">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="thuc-don.html">Thực đơn <i class="fas fa-angle-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a class="nav-link" href="#">Combo</a></li>
+                                            <li><a class="nav-link" href="#">Set lẩu</a></li>
+                                            <li><a class="nav-link" href="#">Nước Uống/Bia</a></li>
+                                            <li><a class="nav-link" href="#t">Các loại rau</a></li>
+                                            <li><a class="nav-link" href="#">Thịt</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="he-thong-cua-hang.html">Hệ thống</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="gallery.html">Thư viện</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="https://www.tobicoo.me/shiplinhnamquan">Đặt ship</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
+                                </ul>
+                            </nav>
+                            <button class="btn btn-order" type="button" onclick="window.location.href='cart.html'">Đặt bàn <i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="top-content-media py-4 py-md-5 text-center">
+                <div class="container">
+                    <h1 class="title-page text-uppercase">Hệ thống Nhà Hàng</h1>
+            </section>
+
+            <section class="list-store-home py-5">
+                <div class="container">
+                    <div class="row g-4 g-lg-5">
+                        <!-- Map Area -->
+                        <div class="col-lg-8">
+                            <div class="shadow-sm rounded overflow-hidden">
+                                <iframe id="mapFrame"
+                                    src="https://www.google.com/maps?q=21.046312,105.785179&output=embed"
+                                    width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <!-- List Area -->
+                        <div class="col-lg-4">
+                            <h2 class="h5 mb-3">Danh sách Nhà Hàng</h2>
+                            <div class="list-stores" style="max-height: 450px; overflow-y: auto;">
+                                <!-- Store Item 1 -->
+                                <div class="item-store card mb-3 shadow-sm border-0">
+                                    <div class="card-body">
+                                        <h3 class="title-store h6 card-title mb-2">
+                                            <a href="#" onclick="focusMap(21.046312, 105.785179); return false;" class="text-decoration-none text-dark fw-bold">
+                                                Lĩnh Nam Tửu Quán: Bắc Từ Liêm
+                                            </a>
+                                        </h3>
+                                        <ul class="address-phone list-unstyled small text-muted mb-0">
+                                            <li class="mb-1 d-flex align-items-start">
+                                                <i class="fas fa-map-marker-alt mt-1 me-2 text-danger" aria-hidden="true"></i>
+                                                <span> 235 Hoàng Quốc Việt, Cổ Nhuế, Bắc Từ Liêm, Hà Nội</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-phone-alt me-2 text-danger" aria-hidden="true"></i>
+                                                <a href="tel:0999999999" class="text-muted text-decoration-none"><b>0999 999 999</b></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Store Item 2 -->
+                                <div class="item-store card mb-3 shadow-sm border-0">
+                                     <div class="card-body">
+                                        <h3 class="title-store h6 card-title mb-2">
+                                             <a href="#" onclick="focusMap(21.271253, 105.829585); return false;" class="text-decoration-none text-dark fw-bold">
+                                                Lĩnh Nam Tửu Quán: Sóc Sơn
+                                            </a>
+                                        </h3>
+                                        <ul class="address-phone list-unstyled small text-muted mb-0">
+                                            <li class="mb-1 d-flex align-items-start">
+                                                 <i class="fas fa-map-marker-alt mt-1 me-2 text-danger" aria-hidden="true"></i>
+                                                <span>7V38+2QG, Đường không tên, Sóc Sơn, Hà Nội</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-phone-alt me-2 text-danger" aria-hidden="true"></i>
+                                                <a href="tel:0999999999" class="text-muted text-decoration-none"><b>0999 999 999</b></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Add more store items here if needed -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- /.Content -->
+
+        <!-- Footer -->
+        <footer class="main-footer text-light bg-dark">
+             <div class="top-footer py-5">
+                <div class="container">
+                    <div class="row gy-4">
+                        <div class="col-lg-6">
+                            <div class="row gy-4">
+                                <div class="col-md-7">
+                                    <img src="storage/upload_image/images/logo_footer.png" alt="Lĩnh Nam Tửu Quán Footer Logo" class="img-fluid logo-fs mb-4" style="max-width: 200px;">
+                                    <div class="list_infor_ft">
+                                     <p  class="mb-2"><img src="storage/upload_image/images/email.png" alt="Email Icon" width="16" class="me-2 align-middle"> <span style="color: #f59699;" class="text-danger">Email: @linhnamtuuquan.vn</span></p>
+                                     <p class="mb-2"><img src="storage/upload_image/images/global.png" alt="Website Icon" width="16" class="me-2 align-middle"> <span style="color: #f59699;"  class="text-danger">Website: www.linhnamtuuquan.vn</span></p>
+                                     <a href="#" title="Đã đăng ký Bộ Công Thương"><img src="storage/upload_image/images/dangkibocongthuong.png" alt="Đăng ký Bộ Công Thương" width="100"></a>
+                                     <a href="https://www.facebook.com/61574765529875" target="_blank" title="Facebook"><img src="storage/upload_image/images/facebook.png"  width="38"></a>
+                                  </div>
+                                                
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="row gy-3">
+                                        <div class="col-md-12 col-6">
+                                            <div class="info-ft-phone">
+                                                <p class="text-uppercase small mb-1">Hotline</p>
+                                                <span class="fs-5 fw-bold d-block">1900 0000</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-6">
+                                            <div class="info-ft-phone">
+                                                <p class="text-uppercase small mb-1">Giờ mở cửa</p>
+                                                <span class="open-store fs-6 d-block">10:00 - 21:30</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                             <button class="btn btn-order w-100" type="button" onclick="window.location.href='cart.html'">Đặt bàn ngay <i class="fas fa-chevron-right"></i></button> <!-- Simplified: removed offcanvas toggle if not implemented -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row gy-4">
+                                <div class="col-md-5">
+                                    <div class="menu-bottom-ft text-center text-md-start">
+                                        <div class="title-menu-bt h5 mb-3 text-uppercase">Liên kết nhanh</div>
+                                        <ul class="list-unstyled list-item-menu-bt">
+                                            <li class="mb-2"><a href="lien-he.html" class="text-light text-decoration-none">Liên hệ</a></li>
+                                            <li class="mb-2"><a href="thuc-don.html" class="text-light text-decoration-none">Thực đơn</a></li>
+                                            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Khuyến mại</a></li> <!-- Assuming placeholder link -->
+                                            <li><a href="lien-he.html" class="text-light text-decoration-none">Câu hỏi thường gặp</a></li> <!-- Assuming placeholder link -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="fb-page d-none d-md-block mb-3" data-href="https://www.facebook.com/61574765529875" data-tabs="" data-width="" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                        <blockquote cite="https://www.facebook.com/61574765529875" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/61574765529875">Lĩnh Nam Tửu Quán</a></blockquote>
+                                    </div>
+                                    <div class="link-to-restaurant text-center text-md-start">
+                                        <a href="he-thong-cua-hang.html" class="btn btn-store btn-outline-light"><i class="fas fa-map-marker-alt me-2"></i> Hệ thống nhà hàng</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /.Footer -->
+
+        <!-- Fixed Elements -->
+        <a href="tel:19000000" class="hotline-icon-only">
+            <i class="fas fa-phone"></i>
+            <span>1900 0000</span>
+          </a>
+          
+    </div> 
+
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v17.0" nonce="yQawsNWn"></script> <!-- Use a unique nonce if generated server-side -->
+
+    <!-- Custom Map Scripts -->
+    <script>
+        function changeMap(lat, lng) {
+            const mapFrame = document.getElementById('mapFrame');
+            mapFrame.src = `https://www.google.com/maps?q=${lat},${lng}&output=embed`;
+        }
+    </script>
+</body>
+</html>

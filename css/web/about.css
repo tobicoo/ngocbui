@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:300,400,600");
+
+.content {
+    padding-top: 60px;
+}
+
+.about-section {
+    text-align: left;
+    margin-bottom: 48px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-section img {
+    max-width: 800px;
+    width: 100%;
+    margin: 24px 0 0 0;
+    display: block;
+}
+
+.about-section .section-title {
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 18px;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+}
+
+.about-section p {
+    font-size: 1.15rem;
+    margin: 0 0 0 0;
+    font-weight: 300;
+    font-family: "Inter", sans-serif;
+    text-align: justify;
+}
+
+.title-page {
+    font-size: 2.5rem !important;
+    font-weight: bold;
+    color: #a51218;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.img-caption {
+    text-align: center;
+    font-size: 0.98rem;
+    color: #888;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .about-section .section-title {
+        font-size: 1.5rem;
+    }
+    .title-page {
+        font-size: 1.7rem !important;
+    }
+    .about-section img {
+        max-width: 100%;
+    }
+    .about-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .about-section p {
+        font-size: 1.08rem;
+    }
+}

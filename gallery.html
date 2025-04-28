@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Liên hệ - Lĩnh Nam Tửu Quán</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="css/web.css" />
+    <link rel="stylesheet" href="css/web/style.css" />
+    <link rel="stylesheet" href="css/web/thuvien.css" />
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+</head>
+
+<body>
+        <header class="navbar-finalstyle">
+            <div class="container-top">
+                <div class="row align-items-center">
+                    <div class="col-md-2 col-2 col-xl-3">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="storage/upload_image/images/logo_footer.png" alt="Lĩnh Nam Tửu Quán" class="img-fluid logo-fs">
+                        </a>
+                    </div>
+                    <div class="col-md-9 col-5">
+                        <div class="d-flex align-items-center justify-content-md-between justify-content-end">
+                            <nav class="menu-top d-none d-lg-block" id="main-menu">
+                                <ul class="list-unstyled text-uppercase">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="thuc-don.html">Thực đơn <i class="fas fa-angle-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a class="nav-link" href="#">Combo</a></li>
+                                            <li><a class="nav-link" href="#">Set lẩu</a></li>
+                                            <li><a class="nav-link" href="#">Nước Uống/Bia</a></li>
+                                            <li><a class="nav-link" href="#">Các loại rau</a></li>
+                                            <li><a class="nav-link" href="#">Thịt</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="he-thong-cua-hang.html">Hệ thống</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="gallery.html">Thư viện</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="https://www.tobicoo.me/shiplinhnamquan">Đặt ship</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
+                                </ul>
+                            </nav>
+                            <button class="btn btn-order" type="button" onclick="window.location.href='cart.html'">Đặt bàn <i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-gallery-content">
+            <div class="main-gallery-detail">
+                <h1 class="text-center title-contact">Thư viện</h1>
+ 
+                    <div class="gallery-grid">
+                            <div class="gallery-card" onclick="showGallery(1)">
+                            <img src="storage/upload_image/images/Menu/combo6.png" alt="combo">
+                            <div class="gallery-card-title">Ảnh combo món ăn</div>
+                        </div>
+                        <div class="gallery-card" onclick="showGallery(2)">
+                            <img src="storage/upload_image/images/mon-dac-sac.jpg" alt="set">
+                            <div class="gallery-card-title">Ảnh set món ăn</div>
+                        </div>
+                        <div class="gallery-card" onclick="showGallery(3)">
+                            <video src="video/khonggian.mp4" autoplay muted loop playsinline style="width: 100%; height: 220px; object-fit: cover; border-radius: 8px;"></video>
+                            <div class="gallery-card-title">Không gian quán</div>
+                        </div>                        
+                        <div class="gallery-card" onclick="showGallery(4)">
+                            <img src="storage/upload_image/images/Menu/thitlon.png" alt="Món ăn đặc sắc">
+                            <div class="gallery-card-title">Món ăn đặc sắc</div>
+                            </div>
+                </div>
+
+                <div id="gallery-display">
+                <!-- Ds ảnh -->
+                </div>
+            </div>
+            </main>
+
+
+        <footer class="main-footer text-light bg-dark">
+            <div class="top-footer py-5">
+                <div class="container">
+                    <div class="row gy-4">
+                        <div class="col-lg-6">
+                            <div class="row gy-4">
+                                <div class="col-md-7">
+                                    <img src="storage/upload_image/images/logo_footer.png" alt="Lĩnh Nam Tửu Quán Footer Logo" class="img-fluid logo-fs mb-4" style="max-width: 200px;">
+                                    <div class="list_infor_ft">
+                                    <p  class="mb-2"><img src="storage/upload_image/images/email.png" alt="Email Icon" width="16" class="me-2 align-middle"> <span style="color: #f59699;" class="text-danger">Email: @linhnamtuuquan.vn</span></p>
+                                    <p class="mb-2"><img src="storage/upload_image/images/global.png" alt="Website Icon" width="16" class="me-2 align-middle"> <span style="color: #f59699;"  class="text-danger">Website: www.linhnamtuuquan.vn</span></p>
+                                    <a href="#" title="Đã đăng ký Bộ Công Thương"><img src="storage/upload_image/images/dangkibocongthuong.png" alt="Đăng ký Bộ Công Thương" width="100"></a>
+                                    <a href="https://www.facebook.com/61574765529875" target="_blank" title="Facebook"><img src="storage/upload_image/images/facebook.png"  width="38"></a>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="row gy-3">
+                                        <div class="col-md-12 col-6">
+                                            <div class="info-ft-phone">
+                                                <p class="text-uppercase small mb-1">Hotline</p>
+                                                <span class="fs-5 fw-bold d-block">1900 0000</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-6">
+                                            <div class="info-ft-phone">
+                                                <p class="text-uppercase small mb-1">Giờ mở cửa</p>
+                                                <span class="open-store fs-6 d-block">10:00 - 21:30</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <button class="btn btn-order w-100" type="button" onclick="window.location.href='cart.html'">Đặt bàn ngay <i class="fas fa-chevron-right"></i></button> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row ">
+                                <div class="col-md-5">
+                                    <div class="menu-bottom-ft text-center text-md-start">
+                                        <div class="text-uppercase">Liên kết nhanh</div>
+                                        <ul class="list-unstyled list-item-menu-bt">
+                                            <li class="mb-2"><a href="lien-he.html" class="text-light text-decoration-none">Liên hệ</a></li>
+                                            <li class="mb-2"><a href="thuc-don.html" class="text-light text-decoration-none">Thực đơn</a></li>
+                                            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Khuyến mại</a></li> 
+                                            <li><a href="lien-he.html" class="text-light text-decoration-none">Câu hỏi thường gặp</a></li> 
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="fb-page d-none d-md-block mb-3" data-href="https://www.facebook.com/61574765529875" data-tabs="" data-width="" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                        <blockquote cite="https://www.facebook.com/61574765529875" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/61574765529875">Lĩnh Nam Tửu Quán</a></blockquote>
+                                    </div>
+                                    <div class="link-to-restaurant text-center text-md-start">
+                                        <a href="he-thong-cua-hang.html" class="btn btn-store btn-outline-light"><i class="fas fa-map-marker-alt me-2"></i> Hệ thống nhà hàng</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Hotline Icon -->
+        <a href="tel:19000000" class="hotline-icon-only">
+            <i class="fas fa-phone"></i>
+            <span>1900 0000</span>
+        </a>
+        <div id="fb-root"></div>
+    </div>
+        <!-- hiển thị fb -->
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v17.0" nonce="yQawsNWn"></script>
+        <script>
+        /*hiện danh sascansh ảnh*/
+        const galleries = {
+        1: ['storage/upload_image/images/Menu/combo6.png', 'storage/upload_image/images/Menu/combo2.png', 'storage/upload_image/images/Menu/c4.png'],
+        2: ['storage/upload_image/images/Menu/set4.png', 'storage/upload_image/images/Menu/set41229.png'],
+        3: ['storage/upload_image/images/khonggian/1.png','storage/upload_image/images/khonggian/3.png'],
+        4: ['storage/upload_image/images/Menu/canuong.png','storage/upload_image/images/Menu/SupNamHaiSan.jpg', 'storage/upload_image/images/Menu/rongphuong.webp']
+        };
+
+        function showGallery(id) {
+        const area = document.getElementById('gallery-display');
+        area.innerHTML = galleries[id].map(src => `<img src="${src}" alt="">`).join('');
+        }
+        </script>
+</body>
+</html>
